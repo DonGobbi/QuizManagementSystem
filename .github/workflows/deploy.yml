@@ -41,7 +41,7 @@ jobs:
           NEXT_PUBLIC_FIREBASE_APP_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_APP_ID }}
           NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID }}
           
-      - name: Check build output
+      - name: Check build output and create .nojekyll
         run: |
           echo "Build output directory contents:"
           ls -la out/
@@ -52,6 +52,10 @@ jobs:
             echo "index.html does not exist"
             exit 1
           fi
+          
+          # Create .nojekyll file to disable Jekyll processing
+          touch out/.nojekyll
+          echo "Created .nojekyll file"
 
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
