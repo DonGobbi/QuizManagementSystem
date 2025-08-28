@@ -40,12 +40,12 @@ jobs:
           NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID }}
           NEXT_PUBLIC_FIREBASE_APP_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_APP_ID }}
           NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID }}
-          
+
       - name: Check build output and create .nojekyll
         run: |
           echo "Build output directory contents:"
           ls -la out/
-          echo "\nChecking for index.html:"
+          echo "Checking for index.html:"
           if [ -f "out/index.html" ]; then
             echo "index.html exists"
           else
