@@ -41,6 +41,7 @@ interface Attempt {
   passed: boolean;
   answers: Record<string, string>;
   completedAt: Date;
+  quizCreatedBy: string;
 }
 
 export default function AdminQuizResultPage() {

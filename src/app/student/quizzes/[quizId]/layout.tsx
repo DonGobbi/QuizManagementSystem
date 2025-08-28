@@ -7,7 +7,7 @@ export function generateStaticParams() {
   return [{ quizId: 'placeholder' }];
 }
 
-export default function EditQuizLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

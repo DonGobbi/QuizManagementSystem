@@ -86,7 +86,17 @@ yarn install
    - Create a Firebase project at [https://console.firebase.google.com/](https://console.firebase.google.com/)
    - Enable Authentication (Email/Password)
    - Create a Firestore database
-   - Update the Firebase configuration in `src/lib/firebase.ts`
+   - Create a `.env.local` file in the root directory with your Firebase configuration:
+   ```
+   NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-auth-domain
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+   NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+   NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=your-measurement-id
+   ```
+   - You can find these values in your Firebase project settings
 
 4. Run the development server
 ```bash

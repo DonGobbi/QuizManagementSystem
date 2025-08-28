@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Server component that exports generateStaticParams
 export function generateStaticParams() {
   // For static export, we'll generate a placeholder path
@@ -7,10 +5,6 @@ export function generateStaticParams() {
   return [{ quizId: 'placeholder' }];
 }
 
-export default function EditQuizLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return <>{children}</>;
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return children;
 }
